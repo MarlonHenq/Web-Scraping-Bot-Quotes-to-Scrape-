@@ -41,10 +41,10 @@ def saveQuote(thisIsAuthor, text, tag):
 
 def saveAuthor(a):
     browser.get(a)
-    authorinf[0] = browser.find_element_by_class_name('author-title')
-    authorinf[1] = browser.find_element_by_class_name('author-born-date').text
-    authorinf[2] = browser.find_element_by_class_name('author-born-location').text
-    authorinf[3] = browser.find_element_by_class_name('author-description').text
+    authorinf.append(browser.find_element_by_class_name('author-title'))
+    authorinf.append(browser.find_element_by_class_name('author-born-date').text)
+    authorinf.append(browser.find_element_by_class_name('author-born-location').text)
+    authorinf.append(browser.find_element_by_class_name('author-description').text)
 
 browser.get(data["url"])
 
